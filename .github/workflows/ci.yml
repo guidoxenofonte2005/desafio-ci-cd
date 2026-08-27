@@ -3,8 +3,7 @@ name: CI Workflow
 on:
   pull_request:
     types: [opened, reopened]
-  push:
-    branches: [feature/*]
+    branches: [develop, main]
     paths-ignore: 
       - README.md
   workflow_dispatch:
