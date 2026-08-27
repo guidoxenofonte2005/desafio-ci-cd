@@ -5,6 +5,8 @@ on:
     types: [opened, reopened]
   push:
     branches: [feature/*]
+    paths-ignore: 
+      - README.md
   workflow_dispatch:
 
 jobs:
