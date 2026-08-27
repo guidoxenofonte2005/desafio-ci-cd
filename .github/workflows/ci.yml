@@ -9,6 +9,7 @@ on:
 
 jobs:
   tests:
+    name: Execução de Testes com Pytest
     runs-on: ubuntu-24.04
 
     steps:
@@ -30,3 +31,22 @@ jobs:
 
       - name: Executar Testes Unitários
         run: pytest tests/ -v
+  
+  security_analysis:
+    # script baseado na documentação do semgrep
+    name: Análise de Segurança com Semgrep
+    permissions: 
+      contents: read
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: semgrep/semgrep
+    
+    if: (github.actor != 'dependabot[bot]')
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v7
+      
+      - name: Checagem de Segurança com Semgrep
+        run: semgrep scan --config p/python
