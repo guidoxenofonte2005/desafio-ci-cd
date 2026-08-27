@@ -1,0 +1,21 @@
+name: CI Workflow
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup do Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+      
+      - name: Teste de Versão
+        run: python --version
