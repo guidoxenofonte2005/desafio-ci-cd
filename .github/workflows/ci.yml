@@ -3,6 +3,8 @@ name: CI Workflow
 on:
   pull_request:
     types: [opened, reopened]
+  push: 
+    branches: [feature/*]
   workflow_dispatch:
 
 jobs:
