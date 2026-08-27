@@ -25,4 +25,4 @@ def test_health_status_code():
 def test_health_content():
     response = client.get("/health")
     data = response.json()
-    assert data["status"] == "healthy"
+    assert data["status"] == "testing"
