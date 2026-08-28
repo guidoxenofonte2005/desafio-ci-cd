@@ -4,8 +4,6 @@ on:
   pull_request:
     types: [opened, reopened]
     branches: [develop, main]
-    paths-ignore: 
-      - README.md
   workflow_dispatch:
 
 jobs:
