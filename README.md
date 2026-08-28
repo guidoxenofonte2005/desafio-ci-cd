@@ -7,7 +7,7 @@
 Este repositório simula o cenário de uma startup que lança sua primeira API e precisa de um processo de entrega automatizado, seguro e confiável. A aplicação em si é simples (dois endpoints em FastAPI), mas o foco do desafio é a esteira de CI/CD ao redor dela:
 
 - **CI** — a cada Pull Request para `develop` ou `main`, o pipeline roda os testes unitários com `pytest` e uma análise de segurança estática (SAST) com **Semgrep**.
-- **CD** — a cada merge na branch `main`, o pipeline builda a imagem Docker da API e publica no Docker Hub, com as tags `latest` e o SHA do commit.
+- **CD** — a cada merge na branch `main`, o pipeline builda a imagem Docker da API e publica no Docker Hub, com as tags `latest` e o SHA do commit. A imagem pública está disponível em: [Docker Hub](https://hub.docker.com/repository/docker/gildo2005/desafio-cicd)
 
 ## Stack
 
