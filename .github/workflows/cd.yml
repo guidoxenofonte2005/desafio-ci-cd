@@ -1,0 +1,16 @@
+name: CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker:
+    name: Build da Imagem e Push para o Dockerhub
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v7
+      
